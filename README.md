@@ -1,3 +1,3 @@
 # LMTH
 
-itš html backwards
+it's html backwards
