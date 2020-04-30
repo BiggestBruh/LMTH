@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
+  <title>Cool Stuff about CSS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/stils.css">
@@ -16,58 +16,73 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
+
+  <div id='navbar'>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Me</a>
+      <a class="navbar-brand" href="#">CSS</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">&ltdiv&gt</a></li>
-        <li><a href="#">&ltspan&gt</a></li>
-        <li><a href="#">&ltcode&gt</a></li>
+          <li><a href="#firstOne">visibility</a></li>
+        <li><a href="#secondOne">border</a></li>
+        <li><a href="#thirdOne">percentages</a></li>
       </ul>
     </div>
   </div>
-</nav>
+
+    
+    <script>
+        window.onscroll = function() {myFunction();};
+        
+        var navbar = document.getElementById("navbar");
+        
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h3 class="margin">Who Am I?</h3>
+  <h3 class="margin">Imma be honest with you here</h3>
   <img src="images/bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm an adventurer</h3>
+  <h3>Coding is heckin weird</h3>
 </div>
 
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  <h3 class="margin">What is CSS?</h3>
+  <p>CSS stands for Cascading Style Sheet. It's a style sheet language (you could say it's a programming language if you wanted to offend a programmer) which allows you to make your web pages look like they have been made later than the 1990s.</p>
   <a href="#" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-search"></span> Search
   </a>
 </div>
 
 <!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">Where To Find Me?</h3><br>
+<div class="container-fluid bg-3 text-center" id='facts'>    
+  <h3 class="margin">Cool Things About CSS</h3><br>
   <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    <div class="col-sm-4" id="firstOne">
+      <p>The <code>visibility</code> property can be set to <code>visible</code> (to make an object visible, unsurprisingly) or <code>hidden</code> (to make it invisible but still have it occupy space. Turns out it can also be set to <code>collapse</code>, which works the same as <code>hidden</code> for everything except table rows, columns and groups of rows/columns, which will NOT occupy space when affected by the <code>collapse</code> property.</p>
+      <img src="images/CoolOne.png" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    <div class="col-sm-4" id="secondOne"> 
+      <p>Speaking of tables, <code>border</code> property allows you to set <code>border-style</code>, <code>border-width</code> and <code>border-color</code> for a table. All 3 of them are actually properties of their own, which means that the <code>border</code> property manipulates other properties, rather than the actual table you're working with. Turns out <code>border-style</code>, <code>border-width</code> and <code>border-color</code> properties can be set separately as well and can be different for each border. A cool trick to know but you probably won't ever use it if you have any respect for yourself or the people viewing your site.</p>
+      <img src="images/CoolTwo.png" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    <div class="col-sm-4" id="thirdOne"> 
+      <p>Horizontal percentages are calculated based on container's width, which means an image the width of which is 75% of a 100x200 container is 75 pixels wide. Pretty simple. But for some reason, vertical percentages also use the width of the container. An image the height of which is 75% of a 100x200 container is 75 pixels high, rather than 150 pixels high, like it may seem at first to anyone with common sense.</p>
+      <img src="images/CoolThree.png" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
   </div>
 </div>
